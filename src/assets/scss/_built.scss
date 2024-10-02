@@ -1,0 +1,243 @@
+.built {
+    padding-top: 170px;
+    @include lg {
+        padding-top: 140px;
+    }
+    @include mmd {
+        padding-top: 100px;
+    }
+    @include sm {
+        padding-top: 60px;
+    }
+    &-title {
+        padding-bottom: 82px;
+        gap: 84px;
+        @include xl {
+            align-items: center;
+        }
+        @include lg {
+            align-items: center;
+            padding-bottom: 70px;
+            gap: 40px;
+        }
+        @include mmd {
+            align-items: center;
+            gap: 12px;
+            padding-bottom: 60px;
+            flex-direction: column;
+            text-align: center;
+        }
+        & span {
+            -webkit-text-stroke-width: 3.5px;
+            -webkit-text-stroke-color: $black;
+            font-family: $font-2;
+            font-size: 129px;
+            font-weight: 400;
+            line-height: 120%;
+            opacity: 0.3;
+            color: transparent;
+            position: relative;
+            z-index: 1;
+            @include xl {
+                font-size: 100px;
+            }
+            @include lg {
+                font-size: 80px;
+            }
+            @include mmd {
+                font-size: 75px;
+            }
+            &::after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: "";
+                width: 100%;
+                height: 50%;
+                background-image: linear-gradient(2deg, #F2F5FA 50%, rgba(48, 48, 48, 0) 100%);
+            }
+        }
+        & .text {
+            max-width: 876px;
+            gap: 35px;
+            @include lg {
+                gap: 20px;
+            }
+            @include mmd {
+                gap: 16px;
+                max-width: 550px;
+            }
+            & h3 {
+                font-family: $font-3;
+                @include font-55;
+                margin-bottom: 37px;
+                @include xl {
+                    margin-bottom: 30px;
+                }
+                @include lg {
+                    margin-bottom: 24px;
+                }
+                @include mmd {
+                    margin-bottom: 24px;
+                }
+            }
+            & p {
+                font-family: $font-2;
+                @include font-24;
+            }
+            & .icon {
+                @include mmd {
+                    display: none !important;
+                }
+            }
+            & img {
+                max-width: 35px;
+                transform: scaleY(-1);
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &-wrap {
+        @include mmd {
+            flex-direction: column;
+            justify-content: center;
+            max-width: 94%;
+        }
+    }
+    &-img {
+        @include mmd {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+        & img {
+            @include mmd {
+                max-width: 86%;
+            }
+        }
+    }
+    &-content {
+        max-width: 935px;
+        position: relative;
+        z-index: 1;
+        @include xxl {
+            max-width: 755px;
+        }
+        @include xl {
+            max-width: 600px;
+        }
+        @include lg {
+            max-width: 550px;
+        }
+        &::after {
+            position: absolute;
+            top: 10px;
+            left: 48px;
+            z-index: -1;
+            content: '';
+            width: 8px;
+            height: 100%;
+            background-image: linear-gradient(to bottom, $white 0%, #ffffff00 100%);
+            @include lg {
+                left: 35px;
+            }
+            @include mmd {
+                left: 35px;
+            }
+            @include sm {
+                display: none;
+            }
+        }
+        &-item {
+            gap: 32px;
+            &:not(:last-child) {
+                margin-bottom: 44px;
+            }
+            @include lg {
+                gap: 18px;
+            }
+            @include mmd {
+                gap: 18px;
+            }
+            @include sm {
+                flex-direction: column;
+                text-align: center;
+                gap: 0px;
+            }
+            & .icon {
+                --size: 103px;
+                width: var(--size);
+                height: var(--size);
+                border-radius: 100%;
+                background-image: linear-gradient(3deg, rgba(244, 247, 253, 0.60) 2.33%, rgba(252, 252, 253, 0.60) 95.4%);
+                border: 1px solid $white;
+                box-shadow: 2px 4px 60px rgba(217, 223, 233, 0.60);
+                backdrop-filter: blur(4px);
+                flex: 0 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include lg {
+                    --size: 80px;
+                }
+                @include mmd {
+                    --size: 70px;
+                }
+                @include sm {
+                    margin: 0 auto;
+                }
+                & img {
+                    @include lg {
+                        max-width: 45px;
+                    }
+                    @include mmd {
+                        max-width: 40px;
+                    }
+                }
+            }
+            & h3 {
+                font-family: $font-2;
+                @include font-32;
+                margin-bottom: 16px;
+                font-weight: 600;
+                padding-top: 20px;
+            }
+            & p {
+                font-family: $font-2;
+                @include font-24;
+                font-weight: 400;
+                margin-bottom: 24px;
+            }
+            & .btn {
+                font-family: $font-2;
+                color: #000;
+                --bs-btn-font-size: 18px;
+                font-weight: 600;
+                @include xxxl {
+                    width: 295px;
+                    height: 54px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 !important;
+                }
+                @include xxl {
+                    width: 295px;
+                    height: 54px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 !important;
+                }
+                @include xl {
+                    width: 295px;
+                    height: 54px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 !important;
+                }
+            }
+        }
+    }
+}

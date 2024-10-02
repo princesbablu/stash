@@ -1,0 +1,107 @@
+.footer {
+    padding-top: 240px;
+    padding-bottom: 64px;
+    background: #4A21EF;
+    font-family: $font-2;
+    position: relative;
+    z-index: 1;
+    @include lg {
+        padding-top: 200px;
+    }
+    @include mmd {
+        padding-top: 150px;
+    }
+    &-wrap {
+        padding-top: 46px;
+        border-top: 1px solid #FFFFFF33;
+        @include mmd {
+            flex-wrap: wrap;
+            justify-content: space-around !important;
+        }
+        & .content {
+            @include sm {
+                margin-bottom: 30px;
+            }
+            & .logo {
+                margin-bottom: 71px;
+                @include mmd {
+                    margin-bottom: 20px;
+                }
+                & img {
+                    @include lg {
+                        max-width: 275px;
+                    }
+                    @include mmd {
+                        max-width: 275px;
+                    }
+                }
+            }
+            & p {
+                color: #DEDEDE;
+                font-weight: 400;
+            }
+        }
+        & .social-list {
+            margin-bottom: 30px;
+        }
+        & .menu {
+            gap: 43px;
+            @include md {
+                margin-left: auto;
+                margin-top: 8px;
+            }
+            &-single {
+                & h6 {
+                    color: #FFF;
+                    // font-family: $font-2;
+                    @include font-24;
+                    font-weight: 500;
+                    letter-spacing: 0.24px;
+                    margin-bottom: 18px;
+                    @include sm {
+                        margin-bottom: 14px;
+                    }
+                }
+                & a {
+                    color: #FFF;
+                    // font-family: $font-2;
+                    font-weight: 400;
+                    letter-spacing: 0.16px;
+                    display: block;
+                    opacity: 0.8;
+                    &:not(:last-child) {
+                        margin-bottom: 12px;
+                        @include sm {
+                            margin-bottom: 6px;
+                        }
+                    }
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    & .style {
+        position: absolute;
+        z-index: -1;
+        // box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        bottom: 0;
+        filter: blur(2px);
+        &-1 {
+            max-width: 105px;
+            left: 0px;
+        }
+        &-2 {
+            max-width: 215px;
+            left: 50%;
+            bottom: 0px;
+            transform: translate(-50%, 0);
+        }
+        &-3 {
+            max-width: 119px;
+            right: 0;
+            bottom: 43px;
+        }
+    }
+}

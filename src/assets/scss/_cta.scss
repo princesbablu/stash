@@ -1,0 +1,135 @@
+.cta {
+    margin-top: 142px;
+    margin-bottom: -160px;
+    position: relative;
+    z-index: 2;
+    @include lg {
+        margin-top: 80px;
+    }
+    @include mmd {
+        margin-top: 80px;
+        margin-bottom: -120px;
+    }
+    &-wrapper {
+        position: relative;
+        z-index: 1;
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            border-radius: 100%;
+            content: '';
+            opacity: 0.6;
+            background: #C9CEDE;
+            filter: blur(66px);
+            z-index: -1;
+        }
+    }
+    &-wrap {
+        border-radius: 32px;
+        border-top: 1px solid #F9FAFC;
+        background: linear-gradient(174deg, rgba(255, 255, 255, 0.20) 10.86%, rgba(252, 252, 253, 0.12) 95.73%);
+        backdrop-filter: blur(44px);
+        padding: 40px 146px 40px 65px;
+        @include xl {
+            padding: 38px 56px;
+        }
+        @include lg {
+            padding: 30px 40px;
+        }
+        @include mmd {
+            padding: 30px 40px;
+        }
+        @include sm {
+            flex-direction: column;
+            text-align: center;
+            padding: 30px 0;
+        }
+        &-img {
+            & img {
+                max-width: 324px;
+                @include lg {
+                    max-width: 240px;
+                }
+                @include mmd {
+                    max-width: 170px;
+                }
+            }
+        }
+        &-content {
+            @include sm {
+                margin-bottom: 20px;
+            }
+            & h3 {
+                font-family: $font-3;
+                max-width: 634px;
+                @include font-52;
+                margin-bottom: 24px;
+            }
+        }
+    }
+    &-btn {
+        display: inline-flex;
+        &:hover {
+            & span {
+                background-color: $primary;
+            }
+            & .icon {
+                & img {
+                    transform: rotate(50deg);
+                }
+            }
+        }
+        & span {
+            border-radius: 61px;
+            background: $white;
+            color: $black;
+            backdrop-filter: blur(83px);
+            padding: 24px 60px;
+            font-family: $font-2;
+            font-size: 30px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            @include transition;
+            @include lg {
+                padding: 24px 40px;
+            }
+            @include mmd {
+                padding: 21px 40px;
+                font-size: 24px;
+            }
+        }
+        & .icon {
+            --size: 93px;
+            width: var(--size);
+            height: var(--size);
+            background: #FFF;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & img {
+                @include transition;
+                max-width: 55px;
+                @include lg {
+                    max-width: 30px;
+                }
+                @include mmd {
+                    max-width: 30px;
+                }
+            }
+            @include xl {
+                --size: 86px;
+            }
+            @include lg {
+                --size: 75px;
+            }
+            @include mmd {
+                --size: 66px;
+            }
+        }
+    }
+}

@@ -1,0 +1,219 @@
+.service {
+    position: relative;
+    z-index: 1;
+    &::after {
+        position: absolute;
+        z-index: -2;
+        top: 310px;
+        left: 0;
+        width: 100%;
+        height: 1320px;
+        content: '';
+        background-image: url(../img/service-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    &::before {
+        position: absolute;
+        z-index: -1;
+        top: 64%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 913px;
+        height: 893px;
+        content: '';
+        border-radius: 100%;
+        border-radius: 24px 0px 24px 24px;
+        border-radius: 456.87px;
+        background: rgba(78, 85, 255, 0.50);
+        filter: blur(400px);
+    }
+    &-title {
+        padding-top: 150px;
+        padding-bottom: 117px;
+        gap: 30px;
+        @include xxxl {
+            gap: 0;
+        }
+        @include xl {
+            padding: 110px 0;
+        }
+        @include lg {
+            padding: 80px 0;
+        }
+        @include mmd {
+            padding: 60px 0;
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+        & p {
+            color: #000;
+            @include font-40;
+            max-width: 705px;
+        }
+        & h2 {
+            font-family: $font-3;
+            @include font-55;
+            position: relative;
+            z-index: 1;
+            max-width: 746px;
+            &::after {
+                position: absolute;
+                z-index: 2;
+                top: -16px;
+                right: 118px;
+                width: 258px;
+                height: 86px;
+                content: '';
+                background-image: url(../img/service-title-icon.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                opacity: 0.8;
+                @include xl {
+                    width: 160px;
+                    height: 73px;
+                }
+                @include lg {
+                    width: 160px;
+                    height: 73px;
+                }
+                @include mmd {
+                    width: 160px;
+                    height: 73px;
+                    top: 19px;
+                    left: 50%;
+                    right: unset;
+                    transform: translate(-50%, 0);
+                }
+                @include sm {
+                    width: 118px;
+                    height: 40px;
+                    top: 65px;
+                }
+            }
+        }
+    }
+    & #btn {
+        color: #000;
+        font-family: $font-3;
+        @include font-25;
+        font-weight: 400;
+        border-radius: 112px;
+        border: 3px solid #FFF;
+        background: linear-gradient(3deg, #F4F7FD 2.33%, #FCFCFD 95.4%);
+        box-shadow: 0px 4px 60px 0px rgba(188, 191, 208, 0.70);
+        backdrop-filter: blur(4px);
+        padding: 32px 24px 32px 40px;
+        position: absolute;
+        right: 0;
+        top: 97px;
+        z-index: 3;
+        @include xl {
+            font-size: 22px;
+        }
+        @include lg {
+            font-size: 22px;
+            padding: 20px 26px;
+            right: 40px;
+        }
+        @include mmd {
+            font-size: 20px;
+            padding: 16px 20px;
+            right: -16px;
+        }
+        @include sm {
+            position: unset;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        @include ssm {
+            font-size: 18px;
+        }
+    }
+    &-wrapper {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    &-wrap {
+        position: relative;
+        z-index: 1;
+        &::after {
+            position: absolute;
+            z-index: 2;
+            bottom: -52px;
+            right: 0px;
+            width: 215px;
+            height: 204px;
+            content: '';
+            background-image: url(../img/eco-icon.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            @include sm {
+                z-index: -1;
+            }
+        }
+    }
+    &-item {
+        @include xxxl {
+            max-width: 780px;
+        }
+        max-width: 50%;
+        padding: 32px 24px 32px 40px;
+        border: 3px solid #FFF;
+        background: linear-gradient(3deg, rgba(244, 247, 253, 0.60) 2.33%, rgba(252, 252, 253, 0.60) 95.4%);
+        backdrop-filter: blur(4px);
+        @include mmd {
+            padding: 20px;
+        }
+        @include sm {
+            border-radius: 24px !important;
+            max-width: 100%;
+            text-align: center;
+            margin-bottom: 20px !important;
+        }
+        &:nth-child(odd) {
+            border-radius: 24px 24px 0px 24px;
+        }
+        &:nth-child(even) {
+            border-radius: 0px 24px 24px 0px;
+            margin-left: auto;
+            @include xxxl {
+                max-width: 752px;
+            }
+            max-width: calc(50% + 3px);
+            @include sm {
+                margin: auto;
+                max-width: 100%;
+            }
+        }
+        &:last-child {
+            border-radius: 24px 0px 24px 24px;
+        }
+        & img {
+            margin-bottom: 16px;
+        }
+        & h5 {
+            @include font-32;
+            margin-bottom: 20px;
+        }
+        & p {
+            font-family: $font-2;
+            @include font-20;
+            margin-bottom: 20px;
+        }
+        & .btn {
+            color: #1C1543;
+            font-family: $font-2;
+            font-weight: 600;
+            @include btnWH;
+            @include sm {
+                margin: 0 auto;
+            }
+        }
+    }
+}

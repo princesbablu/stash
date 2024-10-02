@@ -1,0 +1,184 @@
+.eco {
+    &-title {
+        margin-bottom: 100px;
+        @include mmd {
+            margin-bottom: 70px;
+        }
+        @include sm {
+            margin: 0 auto;
+            max-width: 85%;
+            margin-bottom: 45px;
+        }
+        & h2 {
+            font-family: $font-3;
+            @include font-50;
+            font-weight: 400;
+            line-height: 120%;
+            margin-bottom: 36px;
+            @include mmd {
+                margin-bottom: 22px;
+            }
+            @include sm {
+                margin-bottom: 16px;
+            }
+        }
+        & p {
+            @include font-26;
+            position: relative;
+            z-index: 1;
+            max-width: 517px;
+            margin: 0 auto;
+            --size: 42px;
+            @include lg {
+                --size: 34px;
+            }
+            @include mmd {
+                --size: 34px;
+            }
+            @include sm {
+                --size: 25px;
+            }
+            @include ssm {
+                --size: 20px;
+            }
+            &::after {
+                position: absolute;
+                top: 0;
+                left: -92px;
+                width: var(--size);
+                height: var(--size);
+                content: '';
+                background-image: url(../img/arrow-icon.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                transform: scale(-1);
+                @include lg {
+                    left: -16px;
+                }
+                @include mmd {
+                    left: -16px;
+                }
+                @include ssm {
+                    left: -25px;
+                }
+            }
+            &::before {
+                position: absolute;
+                top: 0;
+                right: -82px;
+                width: var(--size);
+                height: var(--size);
+                content: '';
+                background-image: url(../img/arrow-icon.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                transform: scaleY(-1);
+                @include lg {
+                    right: -16px;
+                }
+                @include mmd {
+                    right: -16px;
+                }
+                @include ssm {
+                    right: -25px;
+                }
+            }
+        }
+    }
+    &-wrap {
+        gap: 88px;
+        @include xl {
+            gap: 24px;
+        }
+        @include lg {
+            gap: 20px;
+        }
+        @include mmd {
+            gap: 18px;
+        }
+        @include sm {
+            flex-wrap: wrap;
+        }
+    }
+    &-item {
+        max-width: 550px;
+        position: relative;
+        z-index: 1;
+        @include sm {
+            text-align: center;
+        }
+        &::after {
+            position: absolute;
+            top: -131px;
+            left: -86px;
+            width: 215px;
+            height: 204px;
+            content: '';
+            background-image: url(../img/eco-icon.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            filter: blur(6px);
+            z-index: -1;
+            @include mmd {
+                width: 150px;
+                height: 140px;
+                top: -74px;
+            }
+        }
+        &:first-child {
+            &::after {
+                left: -86px;
+                background-image: url(../img/eco-icon.png);
+            }
+        }
+        &:nth-child(2) {
+            &::after {
+                left: unset;
+                right: -86px;
+                background-image: url(../img/eco-icon-2.png);
+            }
+        }
+        &-inner {
+            @include xxxl {
+                padding: 36.445px 93.439px 36.445px 32px;
+            }
+            padding: 34px;
+            border-radius: 24px;
+            border: 3px solid $white;
+            background: linear-gradient(3deg, rgba(244, 247, 253, 0.60) 2.33%, rgba(252, 252, 253, 0.60) 95.4%);
+            backdrop-filter: blur(12px);
+            @include lg {
+                padding: 26px;
+            }
+            @include md {
+                padding: 22px;
+                padding-right: 10px;
+            }
+            @include sm {
+                padding: 22px;
+            }
+        }
+        & img {
+            margin-bottom: 16px;
+        }
+        & h3 {
+            font-family: $font-3;
+            @include font-35;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+        & p {
+            margin-bottom: 24px;
+        }
+        & .btn {
+            border: unset !important;
+            @include btnWH;
+            @include sm {
+                margin: 0 auto;
+            }
+        }
+    }
+}
